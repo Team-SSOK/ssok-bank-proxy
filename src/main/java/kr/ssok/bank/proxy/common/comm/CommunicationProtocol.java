@@ -1,4 +1,4 @@
-package kr.ssok.bank.channel.common.comm;
+package kr.ssok.bank.proxy.common.comm;
 
 public class CommunicationProtocol {
 

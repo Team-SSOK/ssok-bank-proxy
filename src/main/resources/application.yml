@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ${SERVER_NAME:ssok-bank-channel}
+    name: ${SERVER_NAME:ssok-bank-proxy}
 
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}

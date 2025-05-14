@@ -1,6 +1,6 @@
-# SSOK-BANK-CHANNEL
+# SSOK-BANK-PROXY
 
-SSOK-BANK 채널계 레포지토리입니다.
+SSOK-BANK-PROXY 대외계 레포지토리입니다.
 
 
 

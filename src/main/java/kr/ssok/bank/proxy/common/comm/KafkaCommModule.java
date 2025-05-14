@@ -1,6 +1,6 @@
-package kr.ssok.bank.channel.common.comm;
+package kr.ssok.bank.proxy.common.comm;
 
-import kr.ssok.bank.channel.common.comm.promise.CommQueryPromise;
+import kr.ssok.bank.proxy.common.comm.promise.CommQueryPromise;
 import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 

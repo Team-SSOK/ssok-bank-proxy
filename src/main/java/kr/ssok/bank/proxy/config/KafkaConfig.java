@@ -1,4 +1,4 @@
-package kr.ssok.bank.channel.config;
+package kr.ssok.bank.proxy.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

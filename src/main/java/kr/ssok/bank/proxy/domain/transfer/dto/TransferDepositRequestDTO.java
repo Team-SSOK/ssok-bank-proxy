@@ -1,4 +1,4 @@
-package kr.ssok.bank.channel.domain.transfer.dto;
+package kr.ssok.bank.proxy.domain.transfer.dto;
 
 import lombok.Getter;
 

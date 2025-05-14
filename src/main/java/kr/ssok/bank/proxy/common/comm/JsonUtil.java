@@ -1,4 +1,4 @@
-package kr.ssok.bank.channel.common.comm;
+package kr.ssok.bank.proxy.common.comm;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

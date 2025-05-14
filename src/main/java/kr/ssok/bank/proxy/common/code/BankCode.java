@@ -1,4 +1,4 @@
-package kr.ssok.bank.channel.common.code;
+package kr.ssok.bank.proxy.common.code;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

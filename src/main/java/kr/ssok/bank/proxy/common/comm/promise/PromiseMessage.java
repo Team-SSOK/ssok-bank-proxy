@@ -1,6 +1,6 @@
-package kr.ssok.bank.channel.common.comm.promise;
+package kr.ssok.bank.proxy.common.comm.promise;
 
-import kr.ssok.bank.channel.common.comm.JsonUtil;
+import kr.ssok.bank.proxy.common.comm.JsonUtil;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 

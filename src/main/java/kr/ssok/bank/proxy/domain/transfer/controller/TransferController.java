@@ -1,13 +1,13 @@
-package kr.ssok.bank.channel.domain.transfer.controller;
+package kr.ssok.bank.proxy.domain.transfer.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
-import kr.ssok.bank.channel.common.comm.CommunicationProtocol;
-import kr.ssok.bank.channel.common.comm.KafkaCommModule;
-import kr.ssok.bank.channel.common.comm.promise.CommQueryPromise;
-import kr.ssok.bank.channel.common.comm.promise.PromiseMessage;
-import kr.ssok.bank.channel.domain.transfer.dto.CompensateRequestDTO;
-import kr.ssok.bank.channel.domain.transfer.dto.TransferDepositRequestDTO;
-import kr.ssok.bank.channel.domain.transfer.dto.TransferWithdrawRequestDTO;
+import kr.ssok.bank.proxy.common.comm.CommunicationProtocol;
+import kr.ssok.bank.proxy.common.comm.KafkaCommModule;
+import kr.ssok.bank.proxy.common.comm.promise.CommQueryPromise;
+import kr.ssok.bank.proxy.common.comm.promise.PromiseMessage;
+import kr.ssok.bank.proxy.domain.transfer.dto.CompensateRequestDTO;
+import kr.ssok.bank.proxy.domain.transfer.dto.TransferDepositRequestDTO;
+import kr.ssok.bank.proxy.domain.transfer.dto.TransferWithdrawRequestDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,7 +1,7 @@
-package kr.ssok.bank.channel.common.comm;
+package kr.ssok.bank.proxy.common.comm;
 
 import jakarta.annotation.PostConstruct;
-import kr.ssok.bank.channel.common.comm.promise.CommQueryPromise;
+import kr.ssok.bank.proxy.common.comm.promise.CommQueryPromise;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.ProducerRecord;
