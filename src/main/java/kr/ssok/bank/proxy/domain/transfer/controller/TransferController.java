@@ -12,8 +12,6 @@ import kr.ssok.bank.proxy.domain.transfer.dto.TransferDepositRequestDTO;
 import kr.ssok.bank.proxy.domain.transfer.dto.TransferWithdrawRequestDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -78,7 +76,7 @@ public class TransferController {
             return ApiResponse.toApiResponse(result);
         } catch (Exception e) {
             log.error("Error processing Promise", e);
-            ApiResponse.of(FailureStatusCode._INTERNAL_SERVER_ERROR, null);
+            return ApiResponse.of(FailureStatusCode._INTERNAL_SERVER_ERROR, null);
         }
     }
 }
