@@ -13,13 +13,14 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 @JsonPropertyOrder({"isSuccess", "code", "message", "result"})
 public class ApiResponse<T> {
 
     @JsonProperty("isSuccess")
-    private final Boolean isSuccess;
-    private final String code;
-    private final String message;
+    private Boolean isSuccess;
+    private String code;
+    private String message;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private T result;
 
@@ -31,11 +32,6 @@ public class ApiResponse<T> {
     // of 메서드의 결과 값을 Json string 으로 변환
     public static <T> String ofJson(BaseCode code, T result){
         return JsonUtil.toJson(of(code, result));
-    }
-
-    @SuppressWarnings("unchecked")
-    public static <T> ApiResponse<T> toApiResponse(String jsonString){
-        return JsonUtil.fromJson(jsonString, ApiResponse.class);
     }
 
     // 성공한 경우 응답 생성
