@@ -8,6 +8,7 @@ import kr.ssok.bank.proxy.common.comm.promise.CommQueryPromise;
 import kr.ssok.bank.proxy.common.comm.promise.PromiseMessage;
 import kr.ssok.bank.proxy.common.constant.FailureStatusCode;
 import kr.ssok.bank.proxy.common.response.ApiResponse;
+import kr.ssok.bank.proxy.common.response.BaseResponseDTO;
 import kr.ssok.bank.proxy.domain.transfer.dto.CompensateRequestDTO;
 import kr.ssok.bank.proxy.domain.transfer.dto.TransferDepositRequestDTO;
 import kr.ssok.bank.proxy.domain.transfer.dto.TransferWithdrawRequestDTO;
@@ -39,6 +40,11 @@ public class TransferController {
 
             PromiseMessage msg = promise.get();
             log.info("[출금 이체] 출금 이체 프로미스 요청을 성공적으로 받았습니다.");
+            ApiResponse<BaseResponseDTO> res = msg.getDataObject(ApiResponse.class);
+
+            log.info("성공여부 : {}",res.getIsSuccess());
+            log.info("메세지 : {}",res.getMessage());
+
             return msg.getDataObject(ApiResponse.class);
 
         } catch (Exception e) {
