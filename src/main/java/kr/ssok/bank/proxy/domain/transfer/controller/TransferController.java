@@ -30,12 +30,15 @@ public class TransferController {
     @PostMapping("/withdraw")
     public ApiResponse<?> relayWithdraw(@RequestBody TransferWithdrawRequestDTO dto) {
         try {
+
+            log.info("[출금 이체] 출금 이체 프로미스 요청을 시작합니다.");
             CommQueryPromise promise = this.commModule.sendPromiseQuery(
                     dto.getWithdrawAccount(),
                     CommunicationProtocol.REQUEST_WITHDRAW,
                     dto, 10);
 
             PromiseMessage msg = promise.get();
+            log.info("[출금 이체] 출금 이체 프로미스 요청을 성공적으로 받았습니다.");
             return msg.getDataObject(ApiResponse.class);
 
         } catch (Exception e) {
@@ -48,12 +51,14 @@ public class TransferController {
     @PostMapping("/deposit")
     public ApiResponse<?> relayDeposit(@RequestBody TransferDepositRequestDTO dto) {
         try {
+            log.info("[입금 이체] 입금 이체 프로미스 요청을 시작합니다.");
             CommQueryPromise promise = this.commModule.sendPromiseQuery(
                     dto.getDepositAccount(),
                     CommunicationProtocol.REQUEST_DEPOSIT,
                     dto, 10);
 
             PromiseMessage msg = promise.get();
+            log.info("[입금 이체] 입금 이체 프로미스 요청을 성공적으로 받았습니다.");
             return msg.getDataObject(ApiResponse.class);
 
         } catch (Exception e) {
