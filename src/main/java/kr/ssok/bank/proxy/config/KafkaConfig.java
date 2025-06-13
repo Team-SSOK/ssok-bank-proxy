@@ -41,8 +41,8 @@ public class KafkaConfig {
     @Bean
     public NewTopic requestTopic() {
         return TopicBuilder.name(requestTopic)
-                .partitions(3)
-                .replicas(1)
+                .partitions(12)
+                .replicas(3)
                 .build();
     }
 
@@ -50,7 +50,7 @@ public class KafkaConfig {
     public NewTopic replyTopic() {
         return TopicBuilder.name(replyTopic)
                 .partitions(1)
-                .replicas(1)
+                .replicas(3)
                 .build();
     }
 
@@ -58,7 +58,7 @@ public class KafkaConfig {
     public NewTopic pushTopic() {
         return TopicBuilder.name(pushTopic)
                 .partitions(3)
-                .replicas(1)
+                .replicas(3)
                 .build();
     }
 
