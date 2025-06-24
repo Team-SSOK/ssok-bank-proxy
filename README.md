@@ -1,9 +1,15 @@
 # SSOK-BANK-PROXY
 
-LG CNS Am Inspire Camp 1기 3조 금융팀의 최종 프로젝트 **SSOK-BANK-PROXY** 대외계 백엔드(Spring Boot) 애플리케이션입니다.  
-이 프로젝트는 SSOK-BANK의 송금, 출금, 보상 요청을 대신 받아 처리하는 리버스 프록시입니다. 
+SSOK-BANK-PROXY는 LG CNS Am Inspire Camp 1기 3조 금융팀의 최종 프로젝트로 개발된 대외계 백엔드 애플리케이션입니다.
+본 프로젝트는 OpenBanking API로부터 전달받은 금융 거래 요청(입금, 출금, 보상)을 내부 Kafka 메시지 큐로 안전하게 전달하는 리버스 프록시 역할을 수행합니다.
 
 ---
+
+## ✨ 주요 기능
+
+입금 요청 처리: OpenBanking 입금 API 요청을 Kafka 메시지로 변환
+출금 요청 처리: OpenBanking 출금 API 요청을 Kafka 메시지로 변환
+보상 요청 처리: 리워드/보상 관련 요청을 Kafka 메시지로 변환
 
 ## 🧱 기술 스택
 
@@ -27,11 +33,12 @@ LG CNS Am Inspire Camp 1기 3조 금융팀의 최종 프로젝트 **SSOK-BANK-PR
     ```
 2. **환경 설정**  
    `src/main/resources/application.yml`에 DB 연결 및 포트, 기타 설정 구성.
-3. **의존성 설치 및 컴파일**
+   
+4. **의존성 설치 및 컴파일**
     ```bash
     mvn clean install
     ```
-4. **서버 실행**
+5. **서버 실행**
     ```bash
     mvn spring-boot:run
     ```
