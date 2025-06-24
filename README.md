@@ -1,6 +1,7 @@
 # SSOK-BANK-PROXY
 
 SSOK-BANK-PROXY는 LG CNS Am Inspire Camp 1기 3조 금융팀의 최종 프로젝트로 개발된 대외계 백엔드 애플리케이션입니다.
+
 본 프로젝트는 OpenBanking API로부터 전달받은 금융 거래 요청(입금, 출금, 보상)을 내부 Kafka 메시지 큐로 안전하게 전달하는 리버스 프록시 역할을 수행합니다.
 
 ---
